@@ -18,6 +18,7 @@ class BrandHeader(Horizontal):
     DEFAULT_CSS = """
     BrandHeader{
         content-align: center middle;
+        margin-left: 2;
     }
     .gold-card {
         width: 5;
