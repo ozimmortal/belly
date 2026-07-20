@@ -19,6 +19,8 @@ class BrandHeader(Horizontal):
     BrandHeader{
         content-align: center middle;
         margin-left: 2;
+        border: solid red;
+        height: 6;
     }
     .gold-card {
         width: 5;
