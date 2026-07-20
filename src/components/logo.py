@@ -1,5 +1,5 @@
 from textual.widget import Widget
-from textual.widgets import Static
+from textual.widgets import Static, Link
 from textual.containers import Horizontal, Vertical
 from lib import state
 
@@ -11,7 +11,11 @@ class BellyLogo(Static):
 
 class TitleBlock(Vertical):
     def compose(self):
-        yield Static("belly", id="app-title")
+        yield Link(
+            "belly",
+            url="https://github.com/ozimmortal/belly",
+            id="app-title"
+        )
         yield Static(f"v{state.APP_VERSION}", id="app-version")
 
 class BrandHeader(Horizontal):
@@ -44,6 +48,9 @@ class BrandHeader(Horizontal):
         
         color: #f2f2f2;
         text-style: bold;
+    }
+    #app-title:hover {
+        background: #969696 50%;
     }
 
     #app-version {
